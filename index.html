@@ -135,24 +135,11 @@
       text-align: center;
     }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 280px);
-      gap: 20px;
-    }
 
     .portfolio-item {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
     }
 
     .portfolio-item:hover img {
@@ -333,6 +320,10 @@
   display: flex;
   gap: 120px;
 }
+.portfolio-item,
+.skill-item {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
   </style>
 </head>
 
@@ -354,7 +345,7 @@
   </header>
 
   <main>
-    <!--This section shows informtion about me (Rachel) with a image of me -->
+    <!--< This section shows information about me (Rachel) with an image of me --> 
     <section id="about">
       <section class="container">
         <article class="row align-items-center py-5">
@@ -369,48 +360,49 @@
         </article>
       </section>
     </section>
-<!--This Section shows my portfolio  with using photos and limks that direct you to two of the games i was at -->
-    <section class="portfolio" id="portfolio">
-      <section class="container">
-        <h2>My Work</h2>
+<!--This section shows my portfolio using photos and links that direct you to two games I was at -->
+  <div class="row">
 
-        <section class="portfolio-grid">
-          <article class="portfolio-item large">
-            <figure>
-              <img src="liverpool.jpg" alt="Anfield stadium in Liverpool">
-            </figure>
-            <section class="overlay">
-              <h3>Anfield Stadium Liverpool</h3>
-              <p>The pinnacle of football architecture</p>
-            </section>
-          </article>
+  <!-- Big image -->
+  <div class="col-sm-8">
+    <div class="portfolio-item h-100">
+      <img src="liverpool.jpg" class="img-fluid h-100 w-100" alt="Anfield Stadium Liverpool">
 
-          <article class="portfolio-item">
-            <a href="https://youtu.be/IHRDPYf0j6M?si=jQdihJdPtcXyV1Rh" target="_blank" rel="noopener noreferrer" class="tile-link">
-              <figure>
-                <img src="leiinsterrrugby.jpeg" alt="Aviva Stadium in Dublin during a Leinster rugby match">
-              </figure>
-              <section class="overlay">
-                <h3>Aviva Stadium Dublin</h3>
-                <p>Leinster's 2023 final vs La Rochelle - watch highlights</p>
-              </section>
-            </a>
-          </article>
+      <div class="overlay">
+        <h3>Anfield Stadium Liverpool</h3>
+        <p>The pinnacle of football architecture</p>
+      </div>
+    </div>
+  </div>
 
-          <article class="portfolio-item">
-            <a href="https://youtu.be/FZQjoWkzIjk?si=Ozj981SRIUEK0rnv" target="_blank" rel="noopener noreferrer" class="tile-link">
-              <figure>
-                <img src="worldcup 2023.png" alt="Stade de France during the 2023 Rugby World Cup quarterfinal">
-              </figure>
-              <section class="overlay">
-                <h3>Stade de France</h3>
-                <p>Ireland vs New Zealand quarterfinal - watch highlights</p>
-              </section>
-            </a>
-          </article>
-        </section>
-      </section>
-    </section>
+  <!-- Two small images -->
+  <div class="col-sm-4 d-flex flex-column">
+
+    <div class="portfolio-item mb-3">
+      <a href="https://youtu.be/IHRDPYf0j6M?si=IBBNu-Os12uSTSw2" target="_blank" rel="noopener noreferrer">
+        <img src="leiinsterrrugby.jpeg" class="img-fluid w-100" alt="Leinster vs La Rochelle">
+
+        <div class="overlay">
+          <h3>Leinster vs La Rochelle</h3>
+          <p>Click to watch the highlights of the game I was at.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="portfolio-item">
+      <a href="https://youtu.be/FZQjoWkzIjk?si=Ozj981SRIUEK0rnv" target="_blank" rel="noopener noreferrer">
+        <img src="worldcup 2023.png" class="img-fluid w-100" alt="Ireland vs New Zealand Rugby World Cup">
+
+        <div class="overlay">
+          <h3>Ireland vs New Zealand</h3>
+          <p>Click to watch the Rugby World Cup highlights.</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+</div>
 
     <!-- Skills Section -->
     <!-- This section shows my top 5 places with images and text -->
